@@ -1,23 +1,11 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { icons } from "../constants";
+import { ResizeMode, Video } from "expo-av";
 
 const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
-
-  const checkYouTubeThumbnail = (thumbnail) => {
-    // check link YouTube
-    const youtubeRegex =
-      /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|v\/|embed\/|.+)?[a-zA-Z0-9_-]+/;
-
-    if (youtubeRegex.test(thumbnail)) {
-      const videoId = thumbnail.split("v=")[1].split("&")[0]; // Tách ID từ URL
-      return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-    }
-
-    return thumbnail;
-  };
-
   const [play, setPlay] = useState(false);
+
   return (
     <View className="flex flex-col items-center px-4 mb-14">
       <View className="flex flex-row gap-3 items-start">
@@ -53,19 +41,26 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
 
       {play ? (
         <>
-          {/* <Video
-                        source={{ uri: video }}
-                        className="w-full h-60 rounded-xl mt-3"
-                        resizeMode={ResizeMode.CONTAIN}
-                        useNativeControls
-                        shouldPlay
-                        onPlaybackStatusUpdate={(status) => {
-                          if (status.didJustFinish) {
-                            setPlay(false);
-                          }
-                        }}
-                      /> */}
-          <Text>Playing</Text>
+          <Video
+            source={{
+              uri: video,
+            }}
+            // className="w-full h-60 rounded-xl mt-3"
+            style={{
+              width: "100%",
+              height: 240,
+              borderRadius: 12,
+              marginTop: 12,
+            }}
+            resizeMode={ResizeMode.CONTAIN}
+            useNativeControls
+            shouldPlay
+            onPlaybackStatusUpdate={(status) => {
+              if (status.didJustFinish) {
+                setPlay(false);
+              }
+            }}
+          />
         </>
       ) : (
         <TouchableOpacity
@@ -74,7 +69,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
           className="w-full h-60 rounded-xl mt-3 relative flex justify-center items-center"
         >
           <Image
-            source={{ uri: checkYouTubeThumbnail(thumbnail) }}
+            source={{ uri: thumbnail }}
             className="w-full h-full rounded-xl mt-3"
             resizeMode="cover"
           />
