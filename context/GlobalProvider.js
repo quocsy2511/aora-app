@@ -26,9 +26,7 @@ const GlobalProvider = ({ children }) => {
       .finally(() => {
         setIsLoading(false);
       });
-      
   }, []);
-
 
   return (
     <GlobalContext.Provider

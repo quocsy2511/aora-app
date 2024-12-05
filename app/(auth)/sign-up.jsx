@@ -22,7 +22,9 @@ const SignUp = () => {
     setIsSubmitting(true);
     try {
       const result = await createUser(form.email, form.username, form.password);
-      router.replace("/home");
+      if (result) {
+        router.replace("/home");
+      }
     } catch (error) {
       console.log("🚀 ~ onSubmit ~ error:", error);
       Alert.alert("Error", error.message);
