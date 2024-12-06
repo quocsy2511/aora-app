@@ -43,8 +43,8 @@ const TrendingItem = ({ activeItem, item }) => {
           source={{ uri: item.video }}
           // className="w-52 h-72 rounded-[33px] mt-3 bg-white/10"
           style={{
-            width: 270,
-            height: 288,
+            width: 208,
+            height: 250,
             borderRadius: 33,
             marginTop: 12,
             backgroundColor: "#ffffff",

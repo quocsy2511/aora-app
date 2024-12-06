@@ -20,12 +20,14 @@ const Home = () => {
   const { user } = useGlobalContext();
   const [refreshing, setRefreshing] = useState(false);
   const { data: post, loading, refetch } = useAppwrite(getAllPosts);
-  const { data: latestPosts } = useAppwrite(getLatestPosts);
+  const { data: latestPosts, refetch: refetchLatestPosts } =
+    useAppwrite(getLatestPosts);
 
   //recall videos -> if any new videos are here -> when u scroll screen will refresh
   const onRefresh = async () => {
     setRefreshing(true);
     await refetch();
+    await refetchLatestPosts();
     setRefreshing(false);
   };
   return (
