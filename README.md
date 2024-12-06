@@ -48,4 +48,22 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# aora-app
+# Aora - Share Your Daily Moments 🌟
+
+Aora is a mobile application designed to let you share and explore the beauty of everyday life. Upload your daily videos, watch content from others, and revisit your personal uploads — all in one platform.
+
+## Features ✨
+- **Upload Videos**: Share your daily moments with the world.  
+- **Explore Content**: Watch the latest videos or browse through content from other users.  
+- **Personalized Profile**: View and manage your own video uploads.  
+
+## Tech Stack 💻
+Aora is built with the following technologies:
+- **React Native**: For building the cross-platform mobile application.  
+- **JavaScript**: Core language for development.  
+- **Tailwind CSS**: For elegant and responsive styling.  
+- **Appwrite**: Used for database management and backend services.  
+
+## Screens demo 💻
+- **Intro Screen**
+![Description of the image](/assets/screensImage/index.jpeg)
