@@ -67,3 +67,21 @@ Aora is built with the following technologies:
 ## Screens demo 💻
 - **Intro Screen**
 ![Description of the image](/assets/screensImage/index.jpeg)
+
+- **Login Screen**
+![Description of the image](/assets/screensImage/login.jpeg)
+
+- **Home Screen**
+![Description of the image](/assets/screensImage/home.jpeg)
+
+- **Play video Screen**
+![Description of the image](/assets/screensImage/playVideo.jpeg)
+
+- **Create Screen**
+![Description of the image](/assets/screensImage/uploadVideo.jpeg)
+
+- **Profile Screen**
+![Description of the image](/assets/screensImage/propfile.jpeg)
+
+
+
