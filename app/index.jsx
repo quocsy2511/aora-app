@@ -6,7 +6,7 @@ import CustomButton from "../components/CustomButton";
 import { Redirect, router } from "expo-router";
 import { useGlobalContext } from "../context/GlobalProvider";
 const RootLayout = () => {
-  const { isLoading, isLoggedIn } = useGlobalContext();
+  const { isLoading, isLoggedIn  } = useGlobalContext();
   if (!isLoading && isLoggedIn) {
     return <Redirect href="/home" />;
   }
